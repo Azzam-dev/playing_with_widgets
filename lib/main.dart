@@ -19,7 +19,6 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         body: PageView(
           controller: pageController,
-          scrollDirection: Axis.vertical,
           children: [
             FirstPage(),
             SecondPage(),
