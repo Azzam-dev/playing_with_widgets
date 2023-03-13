@@ -12,22 +12,85 @@ class FirstPage extends StatelessWidget {
       child: CustomScrollView(
         slivers: [
           SliverAppBar(
-            title: Text("page One"),
+            pinned: true,
+            title: Text(" One"),
             backgroundColor: Colors.green,
           ),
           SliverList(
-              delegate: SliverChildBuilderDelegate((context, index) {
-            return Container(
-              margin: EdgeInsets.all(8),
-              height: 200,
-              color: Colors.green[200],
-              child: Center(
-                  child: Text(
-                "$index",
-                style: TextStyle(fontSize: 25),
-              )),
-            );
-          }, childCount: 10))
+            delegate: SliverChildListDelegate([
+              Container(
+                color: Colors.green[400],
+                child: Text("green"),
+                height: 100,
+              ),
+              Container(
+                color: Colors.green[400],
+                child: Text("green "),
+                height: 100,
+              )
+            ]),
+          ),
+          SliverAppBar(
+            pinned: true,
+            title: Text("Two"),
+            backgroundColor: Colors.orange,
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate([
+              Container(
+                color: Colors.orange[400],
+                child: Text("orange"),
+                height: 100,
+              ),
+              Container(
+                color: Colors.orange[400],
+                child: Text("orange "),
+                height: 100,
+              )
+            ]),
+          ),
+          SliverAppBar(
+            pinned: true,
+            title: Text("Three"),
+            backgroundColor: Colors.red,
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                Container(
+                  color: Colors.red[400],
+                  child: Text("red"),
+                  height: 100,
+                ),
+                Container(
+                  color: Colors.red[400],
+                  child: Text("red "),
+                  height: 100,
+                )
+              ],
+            ),
+          ),
+          SliverAppBar(
+            pinned: true,
+            title: Text("Four"),
+            backgroundColor: Colors.blue,
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                Container(
+                  color: Colors.blue[400],
+                  child: Text("blue"),
+                  height: 100,
+                ),
+                Container(
+                  color: Colors.blue[400],
+                  child: Text("blue "),
+                  height: 100,
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
