@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'pages/FirstPage.dart';
+import 'pages/SecondPage.dart';
+import 'pages/ThirdPage.dart';
+
 void main() {
   runApp(MainApp());
 }
@@ -15,25 +19,11 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         body: PageView(
           controller: pageController,
+          scrollDirection: Axis.vertical,
           children: [
-            Container(
-              color: Colors.green[300],
-              child: Center(
-                child: Text('page 1'),
-              ),
-            ),
-            Container(
-              color: Colors.orange[300],
-              child: Center(
-                child: Text('page 2'),
-              ),
-            ),
-            Container(
-              color: Colors.blue[300],
-              child: Center(
-                child: Text('page 3'),
-              ),
-            ),
+            FirstPage(),
+            SecondPage(),
+            ThirdPage(),
           ],
         ),
       ),
